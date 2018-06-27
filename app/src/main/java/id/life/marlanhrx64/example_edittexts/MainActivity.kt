@@ -12,11 +12,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnToastData.setOnClickListener(){
-            var txt2Display=txtNamaDepan.text.toString() + " " + txtNamaBelakang.text.toString() + "\n" +
-                            "Lahir Di " + txtTempatLahir.text.toString() + " pada " + txtTglLahir.text.toString() + "\n" +
-                            "Tinggal di " + txtAlamat.text.toString() + "\n" +
-                            "Memiliki Email : " + txtEMail.text.toString() + " dan \n" +
-                            "Nomor HP : " + txtNoHP.text.toString()
+            var txt2Display=editxtNamaDepan.text.toString() + " " + editxtNamaBelakang.text.toString() + "\n" +
+                            "Lahir Di " + editxtTptLahir.text.toString() + " pada " + editxtTglLahir.text.toString() + "\n" +
+                            "Tinggal di " + editxtAlamat.text.toString() + "\n" +
+                            "Memiliki Email : " + editxtEMail.text.toString() + " dan \n" +
+                            "Nomor HP : " + editxtNoHP.text.toString()
             Toast.makeText(this,txt2Display,Toast.LENGTH_LONG).show()
         }
     }
