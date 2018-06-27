@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,25 +8,35 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
+        android:lineSpacingExtra="24sp"
         android:text="MASUKKAN DATA ANDA!"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
-        android:textSize="24dp"
-        android:textStyle="bold" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation= "vertical"
-        android:layout_weight="1">
+        android:layout_height="406dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nama Depan"
             android:textStyle="bold" />
+
         <EditText
             android:id="@+id/txtNamaDepan"
             android:layout_width="match_parent"
@@ -39,6 +49,7 @@
             android:layout_height="wrap_content"
             android:text="Nama Belakang"
             android:textStyle="bold" />
+
         <EditText
             android:id="@+id/txtNamaBelakang"
             android:layout_width="match_parent"
@@ -51,12 +62,13 @@
             android:layout_height="wrap_content"
             android:text="Alamat"
             android:textStyle="bold" />
+
         <EditText
             android:id="@+id/txtAlamat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
             android:hint="Alamat"
+            android:inputType="textMultiLine"
             android:textStyle="normal" />
 
         <TextView
@@ -64,6 +76,7 @@
             android:layout_height="wrap_content"
             android:text="Tempat Lahir"
             android:textStyle="bold" />
+
         <EditText
             android:id="@+id/txtTempatLahir"
             android:layout_width="match_parent"
@@ -76,6 +89,7 @@
             android:layout_height="wrap_content"
             android:text="Tanggal Lahir"
             android:textStyle="bold" />
+
         <EditText
             android:id="@+id/txtTglLahir"
             android:layout_width="match_parent"
@@ -89,19 +103,21 @@
             android:layout_height="wrap_content"
             android:text="E-mail"
             android:textStyle="bold" />
+
         <EditText
             android:id="@+id/txtEMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="E-mail"
-            android:textStyle="normal"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textStyle="normal" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nomor HP"
             android:textStyle="bold" />
+
         <EditText
             android:id="@+id/txtNoHP"
             android:layout_width="match_parent"
@@ -112,25 +128,34 @@
     </LinearLayout>
 
     <android.support.v7.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnToastData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="TOAST DATA"/>
-
-        <Button
-            android:id="@+id/btnProsesData"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="PROSES DATA"/>
-
     </android.support.v7.widget.LinearLayoutCompat>
 
+    <Button
+        android:id="@+id/btnToastData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TOAST DATA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnProsesData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="85dp"
+        android:text="PROSES DATA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnToastData" />
+
+</android.support.constraint.ConstraintLayout>
