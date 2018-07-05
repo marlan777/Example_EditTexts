@@ -15,10 +15,11 @@ class Main2Activity : AppCompatActivity() {
         txtAlamat.setText( intent.extras.getString("theAlamat"))
         txtTTLhr.setText( intent.extras.getString("theTptTglLhr"))
         txtEMail.setText( intent.extras.getString("theEMail"))
-        txtNoHP.setText(intent.extras.getString("thxNoHP"))
+        txtNoHP.setText(intent.extras.getString("theNoHP"))
 
         btnBackToMain.setOnClickListener() {
             var intentBack2Main = Intent(this,MainActivity::class.java)
+            intentBack2Main.putExtra("theResult", "OK")
             startActivity(intentBack2Main)
         }
     }
